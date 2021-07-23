@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+$bg-color: #1E1F33;
+$box-bg: #262742;
+$text-color: #FFF;
+$text-gray-color: #8C8C9C;
+$main-color: #EA4B78; 
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+// placeholder
+%btn {
+    width: 150px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: $bg-color;
+}
+
+
+.billing-cards {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    &__plan {
+        width: 380px;
+        height: 220px;
+        background: $box-bg;
+        border-radius: 8px;
+        padding: 30px;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        z-index: 99;
+        .btn-wrappers {
+            .btn-bg {
+                @extend %btn;
+                background: $main-color;
+                color: $text-color;
+                transition: .5s all ease-in-out;
+                &:hover {
+                    cursor: pointer;
+                    background: transparent;
+                    border: 1px solid $main-color;
+                    color: $main-color;
+                }
+            }
+            .btn-no-bg {
+                @extend %btn;
+                background: transparent;
+                color: $text-gray-color;
+                text-decoration: underline;
+            }
+        }
+        p {
+            font-size: 1.4rem;
+            margin-block: 10px;
+        }
+    }
+    &__invoice {
+        width: 380px;
+        height: 400px;
+        background: $box-bg;
+        border-radius: 8px;
+        padding: 20px;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        z-index: 99;
+        h3 {
+            margin-inline: 15px;
+        }
+        &--list {
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                border-radius: 8px;
+                padding:10px 15px;
+                margin-block: 5px;
+                
+                transition: .5s all ease-in-out;
+                &:hover {
+                    background: $bg-color;
+                    cursor: pointer;
+                    .download {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                span {
+                    font-size: 13px;
+                    color: $text-gray-color;
+                }
+                .download {
+                    opacity: 0;
+                    visibility: hidden;
+                    color: $main-color;
+                    transition: .5s all ease-in-out;
+                    // margin-right:15px;
+                }
+                
+            }
+        }
+        .btn-transparent {
+            @extend %btn;
+            background: transparent;
+            border: 1px solid $text-gray-color;
+            color: $text-color;
+            transition: .5s all ease-in-out;
+            &:hover {
+                cursor: pointer;
+                background: $main-color;
+                border: 1px solid $main-color;
+            }
+        }
+    }
+    &__box {
+        position: fixed;
+        top: 57%;
+        left: 45%;
+        background-color: $main-color;
+        width:300px;
+        height: 165px;
+    }
+    
+}

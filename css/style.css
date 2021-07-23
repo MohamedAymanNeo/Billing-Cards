@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.billing-cards__plan .btn-wrappers .btn-bg, .billing-cards__plan .btn-wrappers .btn-no-bg, .billing-cards__invoice .btn-transparent {
+  width: 150px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #1E1F33;
+}
+
+.billing-cards {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  margin: auto;
+}
+
+.billing-cards__plan {
+  width: 380px;
+  height: 220px;
+  background: #262742;
+  border-radius: 8px;
+  padding: 30px;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 99;
+}
+
+.billing-cards__plan .btn-wrappers .btn-bg {
+  background: #EA4B78;
+  color: #FFF;
+  -webkit-transition: .5s all ease-in-out;
+  transition: .5s all ease-in-out;
+}
+
+.billing-cards__plan .btn-wrappers .btn-bg:hover {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #EA4B78;
+  color: #EA4B78;
+}
+
+.billing-cards__plan .btn-wrappers .btn-no-bg {
+  background: transparent;
+  color: #8C8C9C;
+  text-decoration: underline;
+}
+
+.billing-cards__plan p {
+  font-size: 1.4rem;
+  margin-block: 10px;
+}
+
+.billing-cards__invoice {
+  width: 380px;
+  height: 400px;
+  background: #262742;
+  border-radius: 8px;
+  padding: 20px;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 99;
+}
+
+.billing-cards__invoice h3 {
+  margin-inline: 15px;
+}
+
+.billing-cards__invoice--list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-block: 5px;
+  -webkit-transition: .5s all ease-in-out;
+  transition: .5s all ease-in-out;
+}
+
+.billing-cards__invoice--list li:hover {
+  background: #1E1F33;
+  cursor: pointer;
+}
+
+.billing-cards__invoice--list li:hover .download {
+  opacity: 1;
+  visibility: visible;
+}
+
+.billing-cards__invoice--list li span {
+  font-size: 13px;
+  color: #8C8C9C;
+}
+
+.billing-cards__invoice--list li .download {
+  opacity: 0;
+  visibility: hidden;
+  color: #EA4B78;
+  -webkit-transition: .5s all ease-in-out;
+  transition: .5s all ease-in-out;
+}
+
+.billing-cards__invoice .btn-transparent {
+  background: transparent;
+  border: 1px solid #8C8C9C;
+  color: #FFF;
+  -webkit-transition: .5s all ease-in-out;
+  transition: .5s all ease-in-out;
+}
+
+.billing-cards__invoice .btn-transparent:hover {
+  cursor: pointer;
+  background: #EA4B78;
+  border: 1px solid #EA4B78;
+}
+
+.billing-cards__box {
+  position: fixed;
+  top: 57%;
+  left: 45%;
+  background-color: #EA4B78;
+  width: 300px;
+  height: 165px;
+}
+/*# sourceMappingURL=style.css.map */
